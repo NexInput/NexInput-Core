@@ -23,7 +23,7 @@ If the user does not have the "Nex Input" package installed, then the integrated
 If the user uses an outdated gamepad, without a gyroscope, then the API returns the status without a gyroscope.
 
 ## Supported hardware
-- ~~Microsoft Xbox 360 gamepad~~
+- Microsoft Xbox 360 gamepad
 - ~~Microsoft Xbox One gamepad~~
 - ~~Sony DualShok 3 gamepad~~
 - ~~Sony DualShok 4 gamepad~~
