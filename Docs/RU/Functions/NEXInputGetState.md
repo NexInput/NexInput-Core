@@ -40,7 +40,7 @@ typedef struct _NEX_INPUT_STATE
 | SupportRotation | Поддержка датчиков вращения (гироскоп) | True или False |
 | Yaw, Pitch, Roll | Отслеживание вращения | От -180 до 180 (в градусах) |
 
-Если вы предпочитаете использовать кватернион, вы можете получить его из Yaw, Pitch, Roll.
+Если вам нужен кватернион, то вы можете получить его из Yaw, Pitch, Roll.
 ```c
 double qW, qX, qY, qZ;
 myYaw = yaw * (3.14159265358979323846 / 180); //degrees to radians

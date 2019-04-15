@@ -40,7 +40,7 @@ typedef struct _NEX_INPUT_STATE
 | SupportRotation | Support for rotation sensors (gyroscope) | True or False |
 | Yaw, Pitch, Roll | Tracking rotation | Range -180 to 180 (in degrees) |
 
-If you prefer to use a quaternion, you can get it from Yaw, Pitch, Roll.
+If you need a quaternion, then you can get it from Yaw, Pitch, Roll.
 ```c
 double qW, qX, qY, qZ;
 myYaw = yaw * (3.14159265358979323846 / 180); //degrees to radians
