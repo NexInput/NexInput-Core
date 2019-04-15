@@ -40,6 +40,18 @@ typedef struct _NEX_INPUT_STATE
 | SupportRotation | Поддержка датчиков вращения (гироскоп) | True или False |
 | Yaw, Pitch, Roll | Отслеживание вращения | От -180 до 180 (в градусах) |
 
+Если вы предпочитаете использовать кватернион, вы можете получить его из Yaw, Pitch, Roll.
+```c
+double qW, qX, qY, qZ;
+myYaw = yaw * (3.14159265358979323846 / 180); //degrees to radians
+myRoll = roll * (3.14159265358979323846 / 180); //degrees to radians
+myPitch = pitch * (3.14159265358979323846 / 180); //degrees to radians
+qW = cos(myYaw * 0.5) * cos(myRoll * 0.5) * cos(myPitch * 0.5) + sin(myYaw * 0.5) * sin(myRoll * 0.5) * sin(myPitch * 0.5);
+qX = cos(myYaw * 0.5) * sin(myRoll * 0.5) * cos(myPitch * 0.5) - sin(myYaw * 0.5) * cos(myRoll * 0.5) * sin(myPitch * 0.5);
+qY = cos(myYaw * 0.5) * cos(myRoll * 0.5) * sin(myPitch * 0.5) + sin(myYaw * 0.5) * sin(myRoll * 0.5) * cos(myPitch * 0.5);
+qZ = sin(myYaw * 0.5) * cos(myRoll * 0.5) * cos(myPitch * 0.5) - cos(myYaw * 0.5) * sin(myRoll * 0.5) * sin(myPitch * 0.5);
+```
+
 #### Buttons
 Битовая маска кнопок контроллеров. Установленный бит указывает, что нажата соответствующая кнопка. 
 

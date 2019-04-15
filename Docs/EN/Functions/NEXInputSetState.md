@@ -19,19 +19,19 @@ C++
 ```c
 typedef struct _NEX_OUTPUT_STATE
 {
-	WORD			LeftMotorSpeed;
-	WORD			RightMotorSpeed;
-	bool			UseLed;
-	BYTE			LEDRed;
-	BYTE			LEDGreen;
-	BYTE			LEDBlue;
+	WORD					LeftMotorSpeed;
+	WORD					RightMotorSpeed;
+	BYTE					LEDBrightness;
+	BYTE					LEDRed;
+	BYTE					LEDGreen;
+	BYTE					LEDBlue;
 } NEX_OUTPUT_STATE, *PNEX_OUTPUT_STATE;
 ```
 
 | Type | Description | Value |
 | ------------- | ------------- | ------------- |
 | LeftMotorSpeed, RightMotorSpeed | Speed of the left or right motor. | Range 0 to 65535 |
-| UseLed | Using RGB-LED | True or False |
+| UseLed | RGB-LED Brightness | Range 0 to 255 |
 | LEDRed, LEDGreen, LEDBlue | Color for RGB-LED | Range 0 to 255 |
 
 

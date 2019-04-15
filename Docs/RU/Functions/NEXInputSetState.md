@@ -19,19 +19,19 @@ C++
 ```c
 typedef struct _NEX_OUTPUT_STATE
 {
-	WORD			LeftMotorSpeed;
-	WORD			RightMotorSpeed;
-	bool			UseLed;
-	BYTE			LEDRed;
-	BYTE			LEDGreen;
-	BYTE			LEDBlue;
+	WORD					LeftMotorSpeed;
+	WORD					RightMotorSpeed;
+	BYTE					LEDBrightness;
+	BYTE					LEDRed;
+	BYTE					LEDGreen;
+	BYTE					LEDBlue;
 } NEX_OUTPUT_STATE, *PNEX_OUTPUT_STATE;
 ```
 
 | Тип | Описание | Значения |
 | ------------- | ------------- | ------------- |
 | LeftMotorSpeed, RightMotorSpeed | Сила вибрации левого и правого мотора | От 0 до 65535 |
-| UseLed | Использование RGB-светодиода | True или False |
+| LEDBrightness | Яркость RGB-светодиода | От 0 до 255 |
 | LEDRed, LEDGreen, LEDBlue | Цвет для RGB-светодиода | От 0 до 255 |
 
 

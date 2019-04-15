@@ -40,6 +40,18 @@ typedef struct _NEX_INPUT_STATE
 | SupportRotation | Support for rotation sensors (gyroscope) | True or False |
 | Yaw, Pitch, Roll | Tracking rotation | Range -180 to 180 (in degrees) |
 
+If you prefer to use a quaternion, you can get it from Yaw, Pitch, Roll.
+```c
+double qW, qX, qY, qZ;
+myYaw = yaw * (3.14159265358979323846 / 180); //degrees to radians
+myRoll = roll * (3.14159265358979323846 / 180); //degrees to radians
+myPitch = pitch * (3.14159265358979323846 / 180); //degrees to radians
+qW = cos(myYaw * 0.5) * cos(myRoll * 0.5) * cos(myPitch * 0.5) + sin(myYaw * 0.5) * sin(myRoll * 0.5) * sin(myPitch * 0.5);
+qX = cos(myYaw * 0.5) * sin(myRoll * 0.5) * cos(myPitch * 0.5) - sin(myYaw * 0.5) * cos(myRoll * 0.5) * sin(myPitch * 0.5);
+qY = cos(myYaw * 0.5) * cos(myRoll * 0.5) * sin(myPitch * 0.5) + sin(myYaw * 0.5) * sin(myRoll * 0.5) * cos(myPitch * 0.5);
+qZ = sin(myYaw * 0.5) * cos(myRoll * 0.5) * cos(myPitch * 0.5) - cos(myYaw * 0.5) * sin(myRoll * 0.5) * sin(myPitch * 0.5);
+```
+
 #### Buttons
 Bitmask of the device digital buttons, as follows. A set bit indicates that the corresponding button is pressed.
 
