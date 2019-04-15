@@ -8,7 +8,7 @@
 [![IT](https://user-images.githubusercontent.com/9499881/50381884-97f37580-06ab-11e9-8ca8-e8ec7a1b8594.png)](https://github.com/NexInput/Core/blob/master/README.IT.md)
 [![CN](https://user-images.githubusercontent.com/9499881/31012373-978ce414-a522-11e7-9936-387b1c530e2f.png)](https://github.com/NexInput/Core/blob/master/README.CN.md) 
 # Nex Input
-Nex Input is an new modern standard for gamepads which makes it possible to use a gyroscope and RGB-LED. The standard has a simple API that allows to access all popular gamepads.
+Nex Input is an modern standard for gamepads which makes it possible to use a gyroscope and RGB-LED. The gyroscope improves and expands the gaming experience and the RGB-LED gives more atmosphere. The standard has a simple API that allows to access all popular gamepads.
 
 - For developers games: [samples demo](https://github.com/NexInput/Samples), [docs](https://github.com/NexInput/Core/tree/master/Docs) and recommendations for [using a gyroscope and an RGB LED](https://github.com/NexInput/Core/blob/master/Docs/EN/Recommendations/Games.md) in games.
 - For developers drivers for gamepad: [sample driver](https://github.com/NexInput/Sample-driver).
@@ -16,39 +16,15 @@ Nex Input is an new modern standard for gamepads which makes it possible to use 
 - Write your offers and feature requests through "Issue" or email.
 - Become the developer of the standard.
 
-
-## Principle of operation:
-If the user does not have the "Nex Input" package installed, then the integrated library is used, which translates calls into the standard "XInput".
-
-If the user uses an outdated gamepad, without a gyroscope, then the API returns the status without a gyroscope.
-
 ## Supported hardware
-- Microsoft Xbox 360 gamepad
-- ~~Microsoft Xbox One gamepad~~
-- ~~Sony DualShok 3 gamepad~~
-- ~~Sony DualShok 4 gamepad~~
-- ~~Nintendo Switch gamepad~~
-
-## Using the gyroscope
-Gyroscope is a modern feature that can enhance the gaming experience.
-
-
-Gyroscope can be used:
-- For more accurate aiming in shooters;
-- To drive a car;
-- To control a stationary machine gun;
-
-and so on.
-
-## Using RGB LED
-RGB LED can add more atmosphere to the game.
-
-
-RGB LED can be used:
-- To display the level of life (red danger, yellow attention and green all ok);
-- For Ambilight. For example, you go in the game through the tunnel, and then the alarm is turned on, the game turns red and the gamepad LED lights up and Ambilight happens. At night, it definitely adds to the atmosphere.
+- Microsoft Xbox 360 controller
+- ~~Microsoft Xbox One controller~~
+- ~~Sony DualShok 3 controller~~
+- ~~Sony DualShok 4 controller~~
+- ~~Nintendo Switch controller~~
 
 ## Future plans:
+- Demonstration demo with working the gyroscope and RGB-LED.
 - Plugins for Unreal Engine 4 and Unity.
 
 
