@@ -11,6 +11,7 @@ DWORD NEXInputGetState(
 
 #### Parameters
 dwIndex - Index of the user's controller. Can be a value from 0 to 3.
+
 NEX_INPUT_STATE [out] - Pointer to an NEX_INPUT_STATE structure that receives the current state of the controller.
 
 #### NEX_INPUT_STATE structure

@@ -11,6 +11,7 @@ NEXInputGetInfo(
 
 #### Параметры
 dwUserIndex - Индекс контроллера пользователя, от 0 до 3.
+
 NEX_CONTROLLER_INFO [out] - Указатель на структуру NEX_CONTROLLER_INFO, которая получает данные контроллера.
 
 #### Структура NEX_CONTROLLER_INFO

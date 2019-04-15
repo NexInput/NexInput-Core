@@ -11,6 +11,7 @@ DWORD NEXInputGetState(
 
 #### Параметры
 dwUserIndex - Индекс контроллера пользователя, от 0 до 3.
+
 NEX_INPUT_STATE [out] - Указатель на структуру NEX_INPUT_STATE, которая получает текущее состояние контроллера.
 
 #### Структура NEX_INPUT_STATE

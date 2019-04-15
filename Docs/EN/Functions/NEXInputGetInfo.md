@@ -11,6 +11,7 @@ NEXInputGetInfo(
 
 #### Parameters
 dwIndex - Index of the user's controller. Can be a value from 0 to 3.
+
 NEX_CONTROLLER_INFO [out] - Pointer to an NEX_CONTROLLER_INFO structure that receives the current state of the controller.
 
 #### NEX_CONTROLLER_INFO structure
