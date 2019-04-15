@@ -20,8 +20,8 @@
 Гироскоп может использоваться для управления автомобилем. 
 
 ![](https://user-images.githubusercontent.com/9499881/56127334-f2cc1800-5f8d-11e9-858c-9495d7b87463.gif)
-
-![](https://user-images.githubusercontent.com/9499881/52436371-91bb3a80-2b2d-11e9-8bd1-3399e4026962.gif)
+![](https://user-images.githubusercontent.com/9499881/56129589-923fd980-5f93-11e9-99ce-cc0a84d1a9a6.gif)
+![](https://user-images.githubusercontent.com/9499881/56129497-4c831100-5f93-11e9-90d0-8aae9b0ec177.gif)
 
 Для центрирования гироскопа можно отобразить надпись о необходимости ровно зафиксировать контроллер, при загрузке игры и сделать кнопку в меню.
 
