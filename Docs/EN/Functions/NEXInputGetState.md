@@ -39,7 +39,7 @@ typedef struct _NEX_INPUT_STATE
 | AxisLX, AxisRX | Axes of sticks on X | Range -32768 to 32767 |
 | AxisLY, AxisRY | Axes of sticks on Y | Range  -32768 to 32767 |
 | SupportRotation | Support for rotation sensors (gyroscope) | True or False |
-| Yaw, Pitch, Roll | Tracking rotation | Range -180 to 180 (in degrees) |
+| Yaw, Pitch, Roll | Tracking rotation | Range -179.99 to 179.99 (in degrees) |
 
 If you need a quaternion, then you can get it from Yaw, Pitch, Roll.
 ```c
