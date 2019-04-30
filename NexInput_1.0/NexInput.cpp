@@ -80,12 +80,12 @@ typedef DWORD(__stdcall *_NEXInputSetState)(__in DWORD dwUserIndex, __in NEX_OUT
 typedef DWORD(__stdcall *_NEXInputGetInfo)(__in DWORD dwUserIndex, __out NEX_CONTROLLER_INFO *pControllerInfo);
 typedef DWORD(__stdcall *_NEXInputPowerOff)(__in DWORD dwUserIndex);
 
-_NEXInputGetState DriverNEXInputGetState[5];
-_NEXInputSetState DriverNEXInputSetState[5];
-_NEXInputGetInfo DriverNEXInputGetInfo[5];
-_NEXInputPowerOff DriverNEXInputPowerOff[5];
+_NEXInputGetState DriverNEXInputGetState[NEX_INPUT_MAX_COUNT + 1]; // "+ 1" since "0" is used to test the driver
+_NEXInputSetState DriverNEXInputSetState[NEX_INPUT_MAX_COUNT + 1];
+_NEXInputGetInfo DriverNEXInputGetInfo[NEX_INPUT_MAX_COUNT + 1];
+_NEXInputPowerOff DriverNEXInputPowerOff[NEX_INPUT_MAX_COUNT + 1];
 
-HMODULE DriverDll[5];
+HMODULE DriverDll[NEX_INPUT_MAX_COUNT + 1];
 BYTE DriverDllCount = 0;
 BYTE NexInputCount = 0;
 
@@ -93,8 +93,7 @@ typedef struct
 {
 	BYTE DllIndex, ControllerIndex;
 } _DriverIndex;
-
-_DriverIndex DriverControllerIndex[4];
+_DriverIndex DriverControllerIndex[NEX_INPUT_MAX_COUNT];
 
 void Init() {
 	WIN32_FIND_DATA ffd;
@@ -109,11 +108,12 @@ void Init() {
 	{
 		ULONG regSize = sizeof(driversPath);
 
-#ifdef _WIN64
+	#ifdef _WIN64
 		status = key.QueryStringValue(_T("Drivers64"), driversPath, &regSize);
-#else
+	#else
 		status = key.QueryStringValue(_T("Drivers32"), driversPath, &regSize);
-#endif
+	#endif
+
 		_tcscpy_s(_driversPath, driversPath);
 	}
 	key.Close();
@@ -127,7 +127,7 @@ void Init() {
 
 		bool FoundNewDriver;
 
-		if (INVALID_HANDLE_VALUE != hFind)
+		if (hFind != INVALID_HANDLE_VALUE)
 			do
 			{
 				TCHAR driverPath[MAX_PATH] = { 0 };
@@ -160,7 +160,7 @@ void Init() {
 										DriverNEXInputPowerOff[DriverDllCount] = (_NEXInputPowerOff)GetProcAddress(DriverDll[DriverDllCount], "NEXInputPowerOff");
 									}
 
-									//Adding addressing
+									//Adding address
 									DriverControllerIndex[NexInputCount].DllIndex = DriverDllCount;
 									DriverControllerIndex[NexInputCount].ControllerIndex = i;
 									NexInputCount += 1;

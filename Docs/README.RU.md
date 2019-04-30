@@ -11,7 +11,7 @@
 | Название | Описание |
 | ------------- | ------------- |
 | [NEXInputGetState](https://github.com/NexInput/NexInput-Core/blob/master/Docs/RU/Functions/NEXInputGetState.md) | Получение состояния кнопок, вращения, стиков и триггеров контроллера. |
-| [NEXInputSetState](https://github.com/NexInput/NexInput-Core/blob/master/Docs/RU/Functions/NEXInputSetState.md) | Отправка данных контролеру. Функция используется для активации обратной отдачи (вибрации) и включения RGB-светоидиода на контроллере. |
+| [NEXInputSetState](https://github.com/NexInput/NexInput-Core/blob/master/Docs/RU/Functions/NEXInputSetState.md) | Отправка данных контролеру. Функция используется для активации обратной отдачи (вибрации) и включения RGB-светодиода на контроллере. |
 | [NEXInputGetInfo](https://github.com/NexInput/NexInput-Core/blob/master/Docs/RU/Functions/NEXInputGetInfo.md) | Получение типа контроллера, типа подключения и уровня заряда батареи. |
 | [NEXInputPowerOff](https://github.com/NexInput/NexInput-Core/blob/master/Docs/RU/Functions/NEXInputPowerOff.md) | Выключение контроллера. |
 
