@@ -23,9 +23,9 @@ The gyroscope can be used to a car.
 ![](https://user-images.githubusercontent.com/9499881/56129589-923fd980-5f93-11e9-99ce-cc0a84d1a9a6.gif)
 ![](https://user-images.githubusercontent.com/9499881/56129497-4c831100-5f93-11e9-90d0-8aae9b0ec177.gif)
 
+The gyroscope correction can also be activated only by pressing the left trigger (when aiming), this will allow you to use it not only for more accurate aiming, but also for different chips, such as flashlight reloading, weapon reloading, jumping and so on.
 
-
-To centering the gyroscope, you can display an inscription about the need to fix the controller evenly when loading the game and make a button in the menu.
+To centering the gyroscope, you can display an inscription about the need to hold the controller evenly for a couple of seconds while loading the game and make a button in the menu.
 
 ## RGB-LED
 RGB-LED can add more atmosphere to the game.
