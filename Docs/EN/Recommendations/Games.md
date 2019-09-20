@@ -23,7 +23,16 @@ The gyroscope can be used to a car.
 ![](https://user-images.githubusercontent.com/9499881/56129589-923fd980-5f93-11e9-99ce-cc0a84d1a9a6.gif)
 ![](https://user-images.githubusercontent.com/9499881/56129497-4c831100-5f93-11e9-90d0-8aae9b0ec177.gif)
 
-The gyroscope correction can also be activated only by pressing the left trigger (when aiming), this will allow you to use it not only for more accurate aiming, but also for different chips, such as flashlight reloading, weapon reloading, jumping and so on.
+The gyroscope aiming can also be activated only by pressing the left trigger (when aiming), this will allow you to use it not only for more accurate aiming, but also for different chips, such as flashlight reloading, weapon reloading, jumping and so on.
+
+
+In addition to the rotation of the camera can be rotated by a weapon, object or weapon, subject to a certain region (small values of rotation) and after the movement of the camera.
+
+![](https://user-images.githubusercontent.com/9499881/65322659-81d20180-dbb8-11e9-9a91-f3ecd3a67423.gif)
+
+By tilting the controller, you can also rotate the weapon in the right direction and shoot from behind cover.
+
+![](https://user-images.githubusercontent.com/9499881/65322804-d4abb900-dbb8-11e9-89b0-e051c6e00f45.gif)
 
 To centering the gyroscope, you can display an inscription about the need to hold the controller evenly for a couple of seconds while loading the game and make a button in the menu.
 
