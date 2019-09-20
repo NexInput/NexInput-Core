@@ -43,3 +43,6 @@ RGB-LED can add more atmosphere to the game.
 RGB-LED can be used:
 - To display the standard of living (red - danger, yellow - attention and green - everything is ok);
 - For Ambilight. For example, you go in the game through the tunnel, and then the alarm is turned on, the game turns red and then the controller LED lights up and Ambilight occurs. Or the game uses a flashlight and when you turn on the flashlight, you can also turn on the RGB-LED. At night, it definitely adds to the atmosphere.
+
+![](https://user-images.githubusercontent.com/9499881/65325388-b9907780-dbbf-11e9-8fc8-5cae2e2088a9.gif)
+![](https://user-images.githubusercontent.com/9499881/65325393-bbf2d180-dbbf-11e9-8368-ca4bff93a896.gif)
