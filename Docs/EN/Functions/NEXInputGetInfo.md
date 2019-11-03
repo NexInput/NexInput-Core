@@ -40,6 +40,7 @@ Types of controllers. It is necessary to change the display of button icons. The
 | MICROSOFT_XBOX_ONE_CONTROLLER | 2 |
 | SONY_DUALSHOCK_3_CONTROLLER | 26 |
 | SONY_DUALSHOCK_4_CONTROLLER | 27 |
+| SONY_DUALSHOCK_5_CONTROLLER | 28 |
 | NINTENDO_SWITCH_PRO_CONTROLLER | 51 |
 
 #### Return Value
