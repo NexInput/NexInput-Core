@@ -65,6 +65,7 @@ typedef struct _NEX_OUTPUT_STATE
 
 #define SONY_DUALSHOCK_3_CONTROLLER		26;
 #define SONY_DUALSHOCK_4_CONTROLLER		27;
+#define SONY_DUALSHOCK_5_CONTROLLER		28;
 
 #define NINTENDO_SWITCH_PRO_CONTROLLER	51;
 
@@ -144,13 +145,14 @@ void Init() {
 						//Search connected gamepads
 						NEX_INPUT_STATE DriverInputState;
 						FoundNewDriver = true;
-						if (DriverNEXInputGetState != NULL)
+						if (DriverNEXInputGetState[0] != NULL)
 							for (int i = 0; i < NEX_INPUT_MAX_COUNT; i++)
 
 								//If found the connected gamepad then adding driver
 								if (DriverNEXInputGetState[0](i, &DriverInputState) == ERROR_SUCCESS)
 								{
-									if (FoundNewDriver) { //Add new driver only 1 time.
+									//Add new driver only 1 time.
+									if (FoundNewDriver) {
 										FoundNewDriver = false;
 										DriverDllCount += 1;
 										DriverDll[DriverDllCount] = LoadLibrary(driverPath);
