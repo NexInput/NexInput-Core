@@ -22,6 +22,7 @@ typedef struct _NEX_CONTROLLER_INFO
 	WORD								ControllerType;
 	BYTE								ConnectType;
 	BYTE								BatteryLevel;
+	bool								SupportRotation;
 } NEX_CONTROLLER_INFO, *PNEX_CONTROLLER_INFO;
 ```
 
@@ -30,6 +31,7 @@ typedef struct _NEX_CONTROLLER_INFO
 | ControllerType | Controller type | Below |
 | ConnectType | Type of connection, wired or wireless | NEX_CONTROLLER_WIRED - 0 or NEX_CONTROLLER_WIRELESS - 1 |
 | BatteryLevel | Battery charge status | Range 1 to 5 (where 1 is 0%, 3 is 50%, and 5 is 100% charge) with no battery - 0 |
+| SupportRotation | Support for rotation sensors (gyroscope) | True or False |
 
 #### ControllerType
 Types of controllers. It is necessary to change the display of button icons. The list will be updated as new controllers appear.

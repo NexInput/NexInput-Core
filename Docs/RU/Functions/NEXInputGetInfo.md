@@ -22,6 +22,7 @@ typedef struct _NEX_CONTROLLER_INFO
 	WORD								ControllerType;
 	BYTE								ConnectType;
 	BYTE								BatteryLevel;
+	bool								SupportRotation;
 } NEX_CONTROLLER_INFO, *PNEX_CONTROLLER_INFO;
 ```
 
@@ -30,6 +31,7 @@ typedef struct _NEX_CONTROLLER_INFO
 | ControllerType | Тип контроллера | Ниже |
 | ConnectType | Тип подключения, проводное или беспроводное | NEX_CONTROLLER_WIRED - 0 или NEX_CONTROLLER_WIRELESS - 1 |
 | BatteryLevel | Состояние заряда батареи | От 1 до 5 (где 1 это 0%, 3 - 50%, а 5 - 100% заряда), при отсутствии батареи - 0 |
+| SupportRotation | Поддержка датчиков вращения (гироскоп) | True или False |
 
 #### ControllerType
 Типы контроллеров. Необходимо для изменения отображения иконок кнопок. Список будет дополняться по мере появления новых контроллеров.

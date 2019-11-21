@@ -26,7 +26,6 @@ typedef struct _NEX_INPUT_STATE
 	SHORT			AxisLY;
 	SHORT			AxisRX;
 	SHORT			AxisRY;
-	bool			SupportRotation;
 	float			Yaw;
 	float			Pitch;
 	float			Roll;
@@ -38,7 +37,6 @@ typedef struct _NEX_INPUT_STATE
 | LeftTrigger, RightTrigger | Триггеры контроллера | От 0 до 255 |
 | AxisLX, AxisRX | Оси стиков по X | От -32768 до 32767 |
 | AxisLY, AxisRY | Оси стиков по Y | От -32768 до 32767 |
-| SupportRotation | Поддержка датчиков вращения (гироскоп) | True или False |
 | Yaw, Pitch, Roll | Отслеживание вращения | От -179.99 до 179.99 (в градусах) |
 
 Если вам нужен кватернион, то вы можете получить его из Yaw, Pitch, Roll.

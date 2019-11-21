@@ -1,11 +1,8 @@
 ﻿//=================== Nex Input ===================
 //========== https://github.com/NexInput ==========
 
-#include "stdafx.h"
 #include <atlstr.h>
 #include <Windows.h>
-
-#define DLLEXPORT extern "C" __declspec(dllexport)
 
 #define NEX_GAMEPAD_DPAD_UP				0x0001
 #define NEX_GAMEPAD_DPAD_DOWN			0x0002
@@ -33,6 +30,17 @@
 #define ERROR_DEVICE_NOT_CONNECTED		1
 #define ERROR_SUCCESS					0
 
+#define NEX_UNKNOWN_CONTROLLER			0
+
+#define MICROSOFT_XBOX_360_CONTROLLER	1
+#define MICROSOFT_XBOX_ONE_CONTROLLER	2
+
+#define SONY_DUALSHOCK_3_CONTROLLER		26
+#define SONY_DUALSHOCK_4_CONTROLLER		27
+#define SONY_DUALSHOCK_5_CONTROLLER		28
+
+#define NINTENDO_SWITCH_PRO_CONTROLLER	51
+
 typedef struct _NEX_INPUT_STATE
 {
 	WORD								Buttons;
@@ -42,7 +50,6 @@ typedef struct _NEX_INPUT_STATE
 	SHORT								AxisLY;
 	SHORT								AxisRX;
 	SHORT								AxisRY;
-	bool								SupportRotation;
 	float								Yaw;
 	float								Pitch;
 	float								Roll;
@@ -58,30 +65,22 @@ typedef struct _NEX_OUTPUT_STATE
 	BYTE								LEDBlue;
 } NEX_OUTPUT_STATE, *PNEX_OUTPUT_STATE;
 
-#define NEX_UNKNOWN_CONTROLLER			0;
-
-#define MICROSOFT_XBOX_360_CONTROLLER	1;
-#define MICROSOFT_XBOX_ONE_CONTROLLER	2;
-
-#define SONY_DUALSHOCK_3_CONTROLLER		26;
-#define SONY_DUALSHOCK_4_CONTROLLER		27;
-#define SONY_DUALSHOCK_5_CONTROLLER		28;
-
-#define NINTENDO_SWITCH_PRO_CONTROLLER	51;
-
 typedef struct _NEX_CONTROLLER_INFO
 {
 	WORD								ControllerType;
 	BYTE								ConnectType;
 	BYTE								BatteryLevel;
+	bool								SupportRotation;
 } NEX_CONTROLLER_INFO, *PNEX_CONTROLLER_INFO;
+
+#define DLLEXPORT extern "C" __declspec(dllexport)
 
 typedef DWORD(__stdcall *_NEXInputGetState)(__in DWORD dwUserIndex, __out NEX_INPUT_STATE *pInputState);
 typedef DWORD(__stdcall *_NEXInputSetState)(__in DWORD dwUserIndex, __in NEX_OUTPUT_STATE *pOutputState);
 typedef DWORD(__stdcall *_NEXInputGetInfo)(__in DWORD dwUserIndex, __out NEX_CONTROLLER_INFO *pControllerInfo);
 typedef DWORD(__stdcall *_NEXInputPowerOff)(__in DWORD dwUserIndex);
 
-_NEXInputGetState DriverNEXInputGetState[NEX_INPUT_MAX_COUNT + 1]; // "+ 1" since "0" is used to test the driver
+_NEXInputGetState DriverNEXInputGetState[NEX_INPUT_MAX_COUNT + 1]; // "+ 1" since "0" is used to check the driver
 _NEXInputSetState DriverNEXInputSetState[NEX_INPUT_MAX_COUNT + 1];
 _NEXInputGetInfo DriverNEXInputGetInfo[NEX_INPUT_MAX_COUNT + 1];
 _NEXInputPowerOff DriverNEXInputPowerOff[NEX_INPUT_MAX_COUNT + 1];
@@ -154,7 +153,7 @@ void Init() {
 									//Add new driver only 1 time.
 									if (FoundNewDriver) {
 										FoundNewDriver = false;
-										DriverDllCount += 1;
+										DriverDllCount++;
 										DriverDll[DriverDllCount] = LoadLibrary(driverPath);
 										DriverNEXInputGetState[DriverDllCount] = (_NEXInputGetState)GetProcAddress(DriverDll[DriverDllCount], "NEXInputGetState");
 										DriverNEXInputSetState[DriverDllCount] = (_NEXInputSetState)GetProcAddress(DriverDll[DriverDllCount], "NEXInputSetState");
@@ -165,7 +164,7 @@ void Init() {
 									//Adding address
 									DriverControllerIndex[NexInputCount].DllIndex = DriverDllCount;
 									DriverControllerIndex[NexInputCount].ControllerIndex = i;
-									NexInputCount += 1;
+									NexInputCount++;
 								}
 
 						FreeLibrary(DriverDll[0]);
@@ -212,7 +211,7 @@ DLLEXPORT DWORD __stdcall NEXInputGetState(__in DWORD dwUserIndex, __out NEX_INP
 	pInputState->Yaw = 0;
 	pInputState->Pitch = 0;
 	pInputState->Roll = 0;
-	pInputState->SupportRotation = false;
+
 	if (dwUserIndex < NexInputCount)
 		return DriverNEXInputGetState[DriverControllerIndex[dwUserIndex].DllIndex](DriverControllerIndex[dwUserIndex].ControllerIndex, pInputState);
 	else
@@ -232,6 +231,7 @@ DLLEXPORT DWORD __stdcall NEXInputGetInfo(__in DWORD dwUserIndex, __out NEX_CONT
 	pControllerInfo->ControllerType = NEX_UNKNOWN_CONTROLLER;
 	pControllerInfo->ConnectType = NEX_CONTROLLER_WIRED;
 	pControllerInfo->BatteryLevel = NEX_BATTERY_NONE;
+	pControllerInfo->SupportRotation = false;
 
 	if (dwUserIndex < NexInputCount)
 		return DriverNEXInputGetInfo[DriverControllerIndex[dwUserIndex].DllIndex](DriverControllerIndex[dwUserIndex].ControllerIndex, pControllerInfo);
