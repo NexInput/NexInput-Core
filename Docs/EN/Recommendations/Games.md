@@ -17,12 +17,17 @@ The gyroscope can be used to control a stationary machine gun, if the aiming gyr
 
 ![](https://user-images.githubusercontent.com/9499881/56126395-2312b700-5f8c-11e9-9107-4366bc843697.gif)
 
-The gyroscope can be used to a car.
+The gyroscope can be used to control a car.
 
 ![](https://user-images.githubusercontent.com/9499881/56127334-f2cc1800-5f8d-11e9-858c-9495d7b87463.gif)
 ![](https://user-images.githubusercontent.com/9499881/56129589-923fd980-5f93-11e9-99ce-cc0a84d1a9a6.gif)
 ![](https://user-images.githubusercontent.com/9499881/56129497-4c831100-5f93-11e9-90d0-8aae9b0ec177.gif)
 ![](https://user-images.githubusercontent.com/9499881/65323989-e5a9f980-dbbb-11e9-89b1-aaaff7a1f3f9.gif)
+
+The gyroscope can be used to solve various puzzles.
+
+![](https://user-images.githubusercontent.com/9499881/82729192-9138ba00-9d06-11ea-8254-1201a5b0394d.gif)
+
 
 The gyroscope aiming can also be activated only by pressing the left trigger (when aiming), this will allow you to use it not only for more accurate aiming, but also for different chips, such as flashlight reloading, weapon reloading, jumping and so on.
 
