@@ -34,7 +34,8 @@ The gyroscope aiming can also be activated only by pressing the left trigger (wh
 
 In addition to the rotation of the camera can be rotated by a weapon, object or weapon, subject to a certain region (small values of rotation) and after the movement of the camera.
 
-![](https://user-images.githubusercontent.com/9499881/65322659-81d20180-dbb8-11e9-9a91-f3ecd3a67423.gif)
+![](https://user-images.githubusercontent.com/9499881/65322659-81d20180-dbb8-11e9-9a91-f3ecd3a67423.gif) 
+![](https://user-images.githubusercontent.com/9499881/82748449-02ce4200-9db3-11ea-9698-03d3a4b25597.gif)
 
 By tilting the controller, you can also rotate the weapon in the right direction and shoot from behind cover.
 
