@@ -18,9 +18,9 @@ Nex Input is an modern standard for gamepads which makes it possible to use a gy
 
 ## Supported hardware
 - Microsoft Xbox 360 controller
-- ~~Microsoft Xbox One controller~~
+- Microsoft Xbox One controller
 - ~~Sony DualShok 3 controller~~
-- ~~Sony DualShok 4 controller~~
+- Sony DualShok 4 controller (USB)
 - ~~Nintendo Switch controller~~
 
 ## Future plans:
