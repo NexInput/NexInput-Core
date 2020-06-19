@@ -24,7 +24,7 @@
 ![](https://user-images.githubusercontent.com/9499881/56129497-4c831100-5f93-11e9-90d0-8aae9b0ec177.gif)
 ![](https://user-images.githubusercontent.com/9499881/65323989-e5a9f980-dbbb-11e9-89b1-aaaff7a1f3f9.gif)
 
-Гироскоп может использоваться для решения различных загадок.
+Гироскоп может использоваться для решения различных загадок (например, замки взламываемые отмычками, замки сферы и так далее).
 
 ![](https://user-images.githubusercontent.com/9499881/82729192-9138ba00-9d06-11ea-8254-1201a5b0394d.gif)
 
@@ -52,3 +52,4 @@ RGB-светодиод может использоваться:
 
 ![](https://user-images.githubusercontent.com/9499881/65325388-b9907780-dbbf-11e9-8fc8-5cae2e2088a9.gif)
 ![](https://user-images.githubusercontent.com/9499881/65325393-bbf2d180-dbbf-11e9-8368-ca4bff93a896.gif)
+![](https://user-images.githubusercontent.com/9499881/85175754-35bc0680-b289-11ea-8661-96df3027c1f9.gif)

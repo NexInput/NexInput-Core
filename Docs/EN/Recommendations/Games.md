@@ -17,14 +17,14 @@ The gyroscope can be used to control a stationary machine gun, if the aiming gyr
 
 ![](https://user-images.githubusercontent.com/9499881/56126395-2312b700-5f8c-11e9-9107-4366bc843697.gif)
 
-The gyroscope can be used to control a car.
+The gyroscope can be used to driving a car.
 
 ![](https://user-images.githubusercontent.com/9499881/56127334-f2cc1800-5f8d-11e9-858c-9495d7b87463.gif)
 ![](https://user-images.githubusercontent.com/9499881/56129589-923fd980-5f93-11e9-99ce-cc0a84d1a9a6.gif)
 ![](https://user-images.githubusercontent.com/9499881/56129497-4c831100-5f93-11e9-90d0-8aae9b0ec177.gif)
 ![](https://user-images.githubusercontent.com/9499881/65323989-e5a9f980-dbbb-11e9-89b1-aaaff7a1f3f9.gif)
 
-The gyroscope can be used to solve various puzzles.
+The gyroscope can be used to solve various puzzles (for example: lock with picks, sphere locks and etc).
 
 ![](https://user-images.githubusercontent.com/9499881/82729192-9138ba00-9d06-11ea-8254-1201a5b0394d.gif)
 
@@ -52,3 +52,4 @@ RGB-LED can be used:
 
 ![](https://user-images.githubusercontent.com/9499881/65325388-b9907780-dbbf-11e9-8fc8-5cae2e2088a9.gif)
 ![](https://user-images.githubusercontent.com/9499881/65325393-bbf2d180-dbbf-11e9-8368-ca4bff93a896.gif)
+![](https://user-images.githubusercontent.com/9499881/85175754-35bc0680-b289-11ea-8661-96df3027c1f9.gif)
