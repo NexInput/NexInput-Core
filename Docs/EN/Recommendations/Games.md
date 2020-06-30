@@ -27,6 +27,8 @@ The gyroscope can be used to driving a car.
 The gyroscope can be used to solve various puzzles (for example: lock with picks, sphere locks and etc).
 
 ![](https://user-images.githubusercontent.com/9499881/82729192-9138ba00-9d06-11ea-8254-1201a5b0394d.gif)
+![](https://user-images.githubusercontent.com/9499881/86172807-02eafb80-bb30-11ea-9f53-fac1f314b0f1.gif)
+![](https://user-images.githubusercontent.com/9499881/86174231-52cac200-bb32-11ea-963a-fc989ae16629.gif)
 
 
 The gyroscope aiming can also be activated only by pressing the left trigger (when aiming), this will allow you to use it not only for more accurate aiming, but also for different chips, such as flashlight reloading, weapon reloading, jumping and so on.
